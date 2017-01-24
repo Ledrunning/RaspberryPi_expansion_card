@@ -1,5 +1,5 @@
 # RaspberryPi_expansion_card
-Hardware project for Raspberry Pi. 
+<b> Hardware project for Raspberry Pi. </b> 
 This project included:
 
 1. Real time clock;
@@ -17,3 +17,14 @@ This project included:
 7. Four buttons;
 
 <a target="_blank" href="http://radikal.ru"><img src="http://s05.radikal.ru/i178/1701/48/89544d1e9b28.jpg" /></a>
+
+<a target="_blank" href="http://radikal.ru"><img src="http://i079.radikal.ru/1701/f4/ab684faeb321.png" /></a>
+
+<a target="_blank" href="http://radikal.ru"><img src="http://s020.radikal.ru/i720/1701/12/f541ff5f29af.png" /></a>
+
+<b> You can prototyping different electronic devices with this expansion board based on Raspberry Pi; </b>
+
+In BOM folder you can find bill of all materials needed to make this board;
+
+In Design folder you can find circuit design and PCB design files; In order to open this files, 
+you should use the Dip Trace 3.0 CAD or other CAD viewer;
