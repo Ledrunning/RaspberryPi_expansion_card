@@ -1,5 +1,5 @@
 # RaspberryPi_expansion_card
-Hardware project for Raspberry Pi
+Hardware project for Raspberry Pi. 
 This project included:
 
 1. Real time clock;
@@ -15,3 +15,5 @@ This project included:
 6. 220V, 50Hz power supply;
 
 7. Four buttons;
+
+<a target="_blank" href="http://radikal.ru"><img src="http://s05.radikal.ru/i178/1701/48/89544d1e9b28.jpg" /></a>
