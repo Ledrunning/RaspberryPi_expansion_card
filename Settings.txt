@@ -1,0 +1,117 @@
+------------------------------------------------------------------------------------------------------------------------------------
+1 Wire settings:
+------------------------------------------------------------------------------------------------------------------------------------
+Raspbian wheezy
+
+Enter command in console:
+pi@raspberrypi~$ sudo modprobe w1-gpio
+pi@raspberrypi~$ sudo modprobe w1_therm
+
+Then check sensor in system:
+pi@raspberrypi ~ $ sudo ls /sys/bus/w1/devices/w1_bus_master1/
+
+You can see the tabel below entered comman and
+there you should find HEX like 28-000002da8328;  
+This is DS18B20 address;
+
+Next read the data from DS18B20 sensor using command:
+pi@raspberrypi ~ $ cat /sys/bus/w1/devices/w1_bus_master1/28-000002da8328/w1_sla 
+
+And you are going see temperature in console like:
+6f 01 4b 46 7f ff 01 10 67 : crc=67 YES
+6f 01 4b 46 7f ff 01 10 67 t=22937
+
+t=22937 - you should divide this number on 1000 and you will have temperature in Celsius;
+
+------------------------------------------------------------------------------------------------------------------------------------
+Raspbian Jezzy
+
+Enter command:
+pi@raspberrypi~$ sudo nano /boot/config.txt
+
+On next step you should write in config file 
+dtoverlay=w1-gpio,gpiopin=4 
+dtoverlay=w1-gpio-pullup
+
+Then you should reboot your raspberry Pi;
+
+------------------------------------------------------------------------------------------------------------------------------------
+I2C Real Time Clock settings:
+------------------------------------------------------------------------------------------------------------------------------------
+Update your system if it needed and install i2c-tools:
+pi@raspberrypi~$ sudo apt-get update
+pi@raspberrypi~$ sudo apt-get -y upgrade
+pi@raspberrypi~$ sudo apt-get i2c-tools:
+
+Enter command:
+pi@raspberrypi~$ sudo nano /etc/modules
+Add these lines:
+i2c-bcm2708
+i2c-dev
+rtc_ds1307
+ 
+Comment one line in file:
+pi@raspberrypi~$ sudo nano /etc/modprobe.d/raspi-blacklist.conf
+Add  #  Symbol in beginning of line
+
+blacklist i2c-bcm2708
+___________________________________________________________________________
+Reboot system;
+Enter command:
+pi@raspberrypi~$ sudo  lsmod
+
+You will see lines like:
+rtc_ds1307              	  7715  0
+i2c_dev              	  5277  0 
+i2c_bcm2708             4719  0
+___________________________________________________________________________
+
+Get DS1307 address:
+pi@raspberrypi~$ sudo i2cdetect -y 1
+
+You will see table in console:
+
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00: -- -- -- -- -- -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- UU -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- 68 -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
+ 
+In address 0x3b some device without driver and 0x68 perhaps DS1307 clock address. 
+
+Enter command:
+echo ds1307 0x68 > /sys/class/i2c-adapter/i2c-1/new_device
+
+Read clock:
+pi@raspberrypi~$ sudo hwclock -r
+
+Set time:
+pi@raspberrypi~$ sudo hwclock -w
+Set system time from RTC:
+pi@raspberrypi~$ sudo hwclock -s
+
+Automatic RTC start;
+Add lines in  /etc/rc.local file
+
+echo ds1307 0x68 > /sys/class/i2c-adapter/i2c-1/new_device
+sudo hwclock -s
+Before last line in file looks like:
+
+exit 0
+------------------------------------------------------------------------------------------------------------------------------------
+Uart settings:
+------------------------------------------------------------------------------------------------------------------------------------
+Back up files:
+cp /boot/cmdline.txt /boot/cmdline.bak
+cp /etc/inittab /etc/inittab.bak
+
+Delete "console=ttyAMA0,115200" è "kgdboc=ttyAMA0,115200"  lines from configuration file:
+pi@raspberrypi~$ nano /boot/cmdline.txt
+
+Comment last line looks like "T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100: in /etc/inittab file: using # symbol:
+pi@raspberrypi~$ nano /etc/inittab
+
