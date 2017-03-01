@@ -3,8 +3,6 @@
 ## Two scripts written on Python for ADC MCP3008 and DS18B20 temperature sensor;
 ## Prototyping board project for Raspbery Pi B+, Raspberry Pi II, Raspberry Pi 3;
 
-<b> Hardware project for Raspberry Pi. </b> 
-
 Prototyping board included:
 
 1. Real time clock;
