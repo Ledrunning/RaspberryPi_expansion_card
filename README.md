@@ -1,6 +1,9 @@
 # RaspberryPi_expansion_card
+# Prototyping board for Raspbery Pi B+, Raspberry Pi II, Raspberry Pi 3
+
 <b> Hardware project for Raspberry Pi. </b> 
-This project included:
+
+Prototyping board included:
 
 1. Real time clock;
 
