@@ -1,5 +1,7 @@
-# RaspberryPi_expansion_card
-# Prototyping board for Raspbery Pi B+, Raspberry Pi II, Raspberry Pi 3
+# RaspberryPi expansion card;
+## Schematic circuit and PCB;
+## Two scripts written on Python for ADC MCP3008 and DS18B20 temperature sensor;
+## Prototyping board project for Raspbery Pi B+, Raspberry Pi II, Raspberry Pi 3;
 
 <b> Hardware project for Raspberry Pi. </b> 
 
@@ -35,3 +37,5 @@ Prototyping board included:
 * Test sourse codes located in Source folder;
 
 * You should configure your Raspbian using tutorial and commands in Settings.txt;
+
+### More informations in Russian - http://ledrunner.ru/2017/02/01/rpi-expansion-board-2/ (You can use the translate in this site on top right corner)
