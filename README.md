@@ -24,11 +24,11 @@ This project included:
 
 <b> You can prototyping different electronic devices with this expansion board based on Raspberry Pi; </b>
 
-In BOM folder you can find bill of all materials needed to make this board;
+* In BOM folder you can find bill of all materials needed to make this board;
 
-In Design folder you can find circuit design and PCB design files; In order to open this files, 
-you should use the Dip Trace 3.0 CAD or other CAD viewer;
+* In Design folder you can find circuit design and PCB design files; In order to open this files, 
+* you should use the Dip Trace 3.0 CAD or other CAD viewer;
 
-Test sourse codes located in Source folder;
+* Test sourse codes located in Source folder;
 
-You should configure your Raspbian using tutorial and commands in Settings.txt;
+* You should configure your Raspbian using tutorial and commands in Settings.txt;
