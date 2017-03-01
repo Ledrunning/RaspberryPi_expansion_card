@@ -40,4 +40,6 @@ Prototyping board included:
 
 ### This video shows how Raspberry Pi B+ controls frequency drive by Modbus RTU: 
 
-https://www.youtube.com/watch?v=5uCV_gNWw2Q
+[![Everything Is AWESOME](http://i.imgur.com/Ot5DWAW.png)](https://www.youtube.com/watch?v=5uCV_gNWw2Q "=)")
+
+
