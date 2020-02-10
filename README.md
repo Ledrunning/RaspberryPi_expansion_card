@@ -36,7 +36,8 @@ Prototyping board included:
 
 * You should configure your Raspbian using tutorial and commands in Settings.txt;
 
-### More informations in Russian - http://ledrunner.ru/2017/02/01/rpi-expansion-board-2/ (You can use the translate on this site on top right corner)
+### More informations in Russian https://ledrunning.wordpress.com/2017/02/01/raspberrypi2-expansion-card/
+[article](https://ledrunning.wordpress.com/2017/02/01/raspberrypi2-expansion-card/) (You can use the translate on this site on top right corner)
 
 ### This video shows how Raspberry Pi B+ controls frequency drive by Modbus RTU: 
 
