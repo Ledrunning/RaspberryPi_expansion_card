@@ -29,7 +29,7 @@ The Prototyping board included:
 
 * You should configure your Raspbian using the tutorial and commands in Settings.txt;
 
-### More information in Russian [article](https://ledrunning.wordpress.com/2017/02/01/raspberrypi2-expansion-card/) (You can use the translation on this site in the top right corner)
+### More information [article]([https://ledrunning.wordpress.com/2017/02/01/raspberrypi2-expansion-card/](https://hackaday.io/project/204739-versatile-diy-expansion-board-for-raspberry-pi))
 
 
 
