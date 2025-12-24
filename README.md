@@ -29,7 +29,7 @@ The Prototyping board included:
 
 * You should configure your Raspbian using the tutorial and commands in Settings.txt;
 
-### More information [article](https://hackaday.io/project/204739-versatile-diy-expansion-board-for-raspberry-pi/)
+### More information in [article](https://hackaday.io/project/204739-versatile-diy-expansion-board-for-raspberry-pi/)
 
 
 
